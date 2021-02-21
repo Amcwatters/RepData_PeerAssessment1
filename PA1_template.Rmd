@@ -54,7 +54,7 @@ The daily mean number of steps is ````r meanSteps```` and the median is ````r me
 
 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
-``` {r plot daily activity}
+``` {r plotdailyactivity}
 dailyActivity = aggregate(data$steps, by = list(data$interval), FUN=mean, na.rm=TRUE)
 names(dailyActivity) <- c("interval", "meanSteps")
 
@@ -102,7 +102,7 @@ dailySteps2 = aggregate(data2$steps, by = list(data2$date), FUN=sum, na.rm=TRUE)
 names(dailySteps2) <- c("date", "totalSteps")
 ```
 
-```{r histogram 2}
+```{r histogram_2}
 hist(dailySteps2$totalSteps,
      breaks=seq(from=0, to=25000, by=500), 
      col="purple", 
@@ -132,7 +132,7 @@ summary(data2)
 
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
-``` {r plot daily activity for weekends and weekdays}
+``` {r plotdailyactivityweekendsandweekdays}
 
 dailyActivity2 <- aggregate(steps ~ interval + period, data = data2, mean) 
 names(dailyActivity2) <- c("interval","period", "meanSteps")

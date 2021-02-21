@@ -83,7 +83,7 @@ names(dailyActivity) <- c("interval", "meanSteps")
 plot(dailyActivity$interval,dailyActivity$meanSteps,type = "l", col="red",  xlab="5 minute interval", ylab="Mean number of steps", main="Mean number of steps per 5 minute interval")
 ```
 
-![](PA1_template_files/figure-html/plot daily activity-1.png)<!-- -->
+![](PA1_template_files/figure-html/plotdailyactivity-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -159,7 +159,7 @@ hist(dailySteps2$totalSteps,
      main="Histogram of daily total number of steps recorded (imputed nulls)")
 ```
 
-![](PA1_template_files/figure-html/histogram 2-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogram_2-1.png)<!-- -->
 
 ```r
 meanSteps2 = as.integer(mean(dailySteps2$totalSteps), digits=0)
@@ -225,7 +225,7 @@ xyplot(meanSteps ~ interval | period,
        xlab = "5 minute interval", ylab = "Mean number of steps")
 ```
 
-![](PA1_template_files/figure-html/plot daily activity for weekends and weekdays-1.png)<!-- -->
+![](PA1_template_files/figure-html/plotdailyactivityweekendsandweekdays-1.png)<!-- -->
 
 
 ```r
